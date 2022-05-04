@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyApplication" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/yellow_500</item>
+        <item name="colorPrimaryVariant">@color/yellow_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/brown_200</item>
+        <item name="colorSecondaryVariant">@color/brown_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="Theme.MyApplication.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.MyApplication.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.MyApplication.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <declare-styleable name="TextInput">
+        <!-- This is a compatibility attribute for API 25 and below -->
+        <attr name="focusedByDefault" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="SimpleRatingBar">
+        <attr name="isIndicator" format="boolean" />
+        <attr name="rating" format="float" />
+        <attr name="ratingCount" format="integer" />
+        <attr name="ratingEmpty" format="reference" />
+        <attr name="ratingHalf" format="reference" />
+        <attr name="ratingFilled" format="reference" />
+        <attr name="ratingSize" format="dimension"/>
+        <attr name="ratingMargin" format="dimension" />
+    </declare-styleable>
+</resources>

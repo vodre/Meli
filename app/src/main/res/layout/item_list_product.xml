@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:background="?attr/selectableItemBackground"
+    android:layout_height="@dimen/item_list_height">
+
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="@dimen/item_thumbnail_width"
+        android:layout_height="@dimen/item_thumbnail_width"
+        android:scaleType="fitCenter"
+        android:layout_marginHorizontal="@dimen/horizontal_spacing_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:layout_marginHorizontal="@dimen/horizontal_spacing_small"
+        tools:text="This is a long long long long long long long long long long long long title"
+        app:layout_constraintStart_toEndOf="@+id/thumbnail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/thumbnail"
+        style="@style/TextAppearance.AppCompat.Small"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:layout_marginHorizontal="@dimen/horizontal_spacing_small"
+        tools:text="$245"
+        app:layout_constraintStart_toEndOf="@+id/thumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        style="@style/TextAppearance.AppCompat.Widget.PopupMenu.Header"/>
+
+    <TextView
+        android:id="@+id/condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:layout_marginTop="@dimen/vertical_spacing_smaller"
+        android:layout_marginHorizontal="@dimen/spacing_normal"
+        tools:text="Nuevo | Usado"
+        app:layout_constraintStart_toEndOf="@+id/thumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/shipment"
+        android:textSize="@dimen/textSize_tiny"
+        style="@style/TextAppearance.AppCompat.Small"/>
+
+    <TextView
+        android:id="@+id/shipment"
+        android:layout_width="@dimen/shipping_size"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:padding="2dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/green_500"
+        android:layout_marginHorizontal="@dimen/horizontal_spacing_small"
+        android:text="@string/envio_gratuito"
+        app:layout_constraintStart_toEndOf="@+id/thumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/price"
+        android:textSize="@dimen/textSize_tiny"
+        style="@style/TextAppearance.AppCompat.Small"/>
+
+    <ImageView
+        android:id="@+id/mercado_pago"
+        android:layout_width="@dimen/mepa_icon_size"
+        android:layout_height="@dimen/mepa_icon_size"
+        android:layout_marginHorizontal="@dimen/spacing_huge"
+        app:layout_constraintTop_toTopOf="@+id/shipment"
+        app:layout_constraintBottom_toBottomOf="@+id/shipment"
+        app:layout_constraintStart_toEndOf="@+id/shipment"
+        android:src="@drawable/mercado_pago"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

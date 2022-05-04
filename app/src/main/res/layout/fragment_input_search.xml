@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorPrimary"
+    tools:context=".ui.input.SearchInputFragment">
+
+    <com.meli.challenge.utils.TextInput
+        android:id="@+id/email_text_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vertical_spacing_large"
+        app:endIconMode="clear_text"
+        android:background="@color/white"
+        app:hintTextColor="@color/black"
+        android:layout_marginHorizontal="@dimen/spacing_big"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/search_btn"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="flagNoExtractUi"
+            android:textColorHint="?colorSecondaryVariant"
+            android:hint="Busca productos, marcas y más.."
+            android:textCursorDrawable="@null"
+            android:inputType="textEmailAddress" />
+
+    </com.meli.challenge.utils.TextInput>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/search_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:backgroundTint="?colorSecondaryVariant"
+        android:layout_marginHorizontal="@dimen/spacing_big"
+        app:layout_constraintStart_toEndOf="@+id/email_text_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/email_text_input"
+        app:layout_constraintBottom_toBottomOf="@+id/email_text_input"
+        android:src="@drawable/ic_search"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

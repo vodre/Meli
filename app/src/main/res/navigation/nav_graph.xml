@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/search_input_fragment">
+
+    <fragment
+        android:id="@+id/search_input_fragment"
+        android:name="com.meli.challenge.ui.input.SearchInputFragment"
+        android:label="Input Search Fragment"
+        tools:layout="@layout/fragment_input_search" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/search_results_fragment"
+        android:name="com.meli.challenge.ui.results.SearchResultsFragment"
+        android:label="Input Search Fragment"
+        tools:layout="@layout/fragment_input_search" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/product_detail_fragment"
+        android:name="com.meli.challenge.ui.detail.ProductDetailFragment"
+        android:label="Input Search Fragment"
+        tools:layout="@layout/fragment_input_search" >
+    </fragment>
+
+</navigation>
